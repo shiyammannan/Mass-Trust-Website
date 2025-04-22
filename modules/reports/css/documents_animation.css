@@ -1,0 +1,152 @@
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Individual card styling */
+.card {
+    flex: 1;
+    cursor: pointer;
+    transition: flex 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 440px;
+    width: 220px;
+    overflow: hidden;
+    border: 1px solid #888888;
+    background-color: #345F3C;
+    margin: 5px;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card content styling */
+.card-content {
+    text-align: center;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the card topic text */
+.card-topic {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for the card description */
+.card-description {
+    font-size: 17px;
+    color: #ffffff;
+    margin-top: 10px;
+    display: none;
+    transition: opacity 0.3s ease;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Image styling within the card */
+.card-image {
+    max-height: 150px;
+    max-width: 150px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Download button styling */
+.download-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.download-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Expanded state styling for the card */
+.card.expanded {
+    flex: 5;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjustments for the card topic in expanded state */
+.card.expanded .card-topic {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Display the image, description, and download button when the card is expanded */
+.card.expanded .card-image,
+.card.expanded .card-description,
+.card.expanded .download-button {
+    display: block;
+    opacity: 1;
+}
+
+.card.expanded .card-image {
+    width: 220px;
+    height: 220px;
+}
+
+/* Additional media query for responsiveness */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+.card-description{
+    font-size: xx-small;
+}
+.card-image{
+    max-width: 50px;
+    max-height: 50px;
+}
+    .card {
+        width: 150px;
+        height: 250px;
+        flex-shrink: 0;
+        margin: 10px;
+        scroll-snap-align: start;
+    }
+
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-content {
+        padding: 5px;
+    }
+}

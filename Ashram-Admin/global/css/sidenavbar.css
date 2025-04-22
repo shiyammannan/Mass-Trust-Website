@@ -1,0 +1,113 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #294d32; /* Olive green background */
+    color: #F8F8F2; /* Light text color */
+    transition: width 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1200;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80%;
+    max-width: 120px;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid #6B8E23; /* Darker olive green for separation */
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #F8F8F2;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li a .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #556B2F; /* Dark olive green on hover */
+}
+
+.sidebar-menu li.active a {
+    background-color: #556B2F; /* Active link color */
+    color: #FFFFFF;
+    border-left: 5px solid #9ACD32; /* Light olive left border for active link */
+}
+
+.sidebar-menu li a span {
+    margin-left: 10px;
+}
+
+/* Main Content */
+main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Responsive Sidebar Shrink */
+.sidebar.shrink {
+    width: 80px;
+}
+
+.sidebar.shrink .sidebar-menu li a span {
+    display: none;
+}
+
+.sidebar.shrink .sidebar-menu li a .icon {
+    margin-right: 0;
+}

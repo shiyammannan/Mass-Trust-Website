@@ -1,0 +1,112 @@
+/* Define the slide-in animation for the heading */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px); /* Start position above the screen */
+        opacity: 0; /* Start as invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End as visible */
+    }
+}
+
+/* Define the fade-in animation for the cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start as invisible */
+    }
+    to {
+        opacity: 1; /* End as visible */
+    }
+}
+
+#aboutus_gif_container {
+    margin-top: 70px;
+}
+
+.gif_containers {
+    text-align: center;
+    padding: 20px;
+}
+
+.gif_containers_headings {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 20px;
+    opacity: 0; /* Start with invisible heading */
+    transform: translateY(-50px); /* Start position for slide-in effect */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Transition effect */
+}
+
+/* Add animation to the heading */
+.gif_containers_headings.fade-in {
+    animation: slideInFromTop 1s forwards;
+}
+
+.card-containers {
+    display: flex;
+    gap: 50px; /* Space between the cards */
+    overflow-x: hidden; /* Hide horizontal overflow for larger screens */
+    
+}
+
+.cards {
+    background-color: rgb(19, 161, 19); /* Set the background color to green */
+    color: white; /* Set text color to white for contrast */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for subtle emphasis */
+    text-align: left; /* Align text to the left */
+    opacity: 0; /* Start with invisible cards */
+    transition: opacity 1s ease-in; /* Transition effect for fade-in */
+}
+
+/* Add animation to the cards */
+.cards.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.card-images {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card-names {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .card-containers {
+        flex-direction: row; /* Arrange the cards in a horizontal row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Ensure snapping while scrolling */
+        gap: 10px; /* Reduce gap between the cards */
+        padding: 0 10px; /* Add some padding */
+        transition: none;
+    }
+    
+    .cards {
+        flex: 0 0 100%; /* Each card takes full viewport width on mobile */
+        scroll-snap-align: center; /* Snap the card to the center */
+        max-width: 100%; /* Make the card width responsive */
+        box-sizing: border-box;
+        transition: none;
+    }
+    
+    .gif_containers_headings {
+        transition: none;
+        font-size: x-large;
+    }
+}

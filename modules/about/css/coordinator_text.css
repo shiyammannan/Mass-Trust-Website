@@ -1,0 +1,91 @@
+/* CSS Variables for consistent styling */
+:root {
+  --line-color: #000;
+  --line-width: 4px;
+  --line-height: 100%;
+  --line-thickness: 2px; /* Reduced thickness for mobile */
+}
+
+/* Main container styling */
+.our-coordinator-text {
+  display: flex;
+  align-items: stretch; /* Stretch children to fill height of the container */
+  justify-content: center; /* Center content horizontally */
+  margin-left: 30px;
+  height: 250px; /* Ensure enough height to display the vertical line */
+  margin-top: 81px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  flex: 1; /* Allow content divs to grow and fill available space */
+}
+
+/* Remove all transitions and animations */
+.vertical-line {
+  width: var(--line-width);
+  background-color: var(--line-color); /* Line color */
+  margin: 0 20px; /* Space between content and line */
+  height: var(--line-height); /* Line stretches full height of container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .our-coordinator-text {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center;
+    margin-left: 0; /* Remove margin for better mobile view */
+  }
+
+  .vertical-line {
+    width: var(--line-thickness); /* Use thinner line on mobile */
+    height: 100%; /* Full height for mobile */
+    margin: 20px 0; /* Space above and below line */
+  }
+
+  /* Ensure content is visible without animation */
+  .content {
+    opacity: 1; /* Ensure content is visible */
+  }
+
+  /* Adjust font size for mobile */
+  .head {
+    font-size: 30px; /* Smaller font size for head (adjusted) */
+  }
+
+  .subhead {
+    font-size: 18px; /* Adjusted font size for subhead */
+  }
+}
+
+@media (max-width: 480px) {
+  .our-coordinator-text {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center;
+    margin-left: 0; /* Remove margin for better mobile view */
+  }
+
+  .vertical-line {
+    width: var(--line-thickness); /* Use thinner line on mobile */
+    height: 100%; /* Full height for mobile */
+    margin: 20px 0; /* Space above and below line */
+  }
+
+  /* Ensure content is visible without animation */
+  .content {
+    opacity: 1; /* Ensure content is visible */
+  }
+
+  /* Further reduce font size for smaller mobile screens */
+  .head {
+    font-size: 30px; /* Further reduced font size for head (adjusted) */
+  }
+
+  .subhead {
+    font-size: 16px; /* Reduced font size for subhead */
+  }
+}

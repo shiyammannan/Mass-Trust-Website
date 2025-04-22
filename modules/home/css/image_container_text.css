@@ -1,0 +1,27 @@
+#image_container_text{
+    margin-top: 80px;
+}
+#gallery_text{
+    margin-top: 80px;
+}
+#gallery_container{
+    margin-top: 80px;
+}
+@media (max-width: 768px) {
+
+    .head{
+        font-size:30px;
+    }
+    .heads{
+        font-size:20px;
+    }
+}
+@media (max-width: 480px) {
+
+    .head{
+        font-size:30px;
+    }
+    .heads{
+        font-size:15px;
+    }
+}

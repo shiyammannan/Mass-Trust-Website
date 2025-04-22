@@ -1,0 +1,34 @@
+#image_container{
+    margin-top: 110px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+}
+@media (max-width: 991px) {
+    .image-gallery {
+        flex-wrap: wrap;
+    }
+}
+.image-containers {
+    overflow: hidden;
+    flex: 1;
+    transition: flex 0.3s ease-in-out;
+    height: 500px; /* Reduced height */
+    border-radius: 50px;
+}
+.image-containers:hover {
+    flex: 3; /* Adjust flex value to control how much the hovered image enlarges */
+}
+.gallery-image {
+    aspect-ratio: 0.35;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}

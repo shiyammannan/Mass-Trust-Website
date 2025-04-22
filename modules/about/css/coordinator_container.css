@@ -1,0 +1,112 @@
+/* Coordinator container */
+.coordinator-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.headzz {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 900;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+/* Wrapper to position slide buttons */
+.card-container-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Card container with horizontal scrolling and sliding */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar */
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container {
+  scrollbar-width: none;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  flex: 0 0 auto;
+  padding: 10px;
+  scroll-snap-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-name {
+  margin-top: 10px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Slide button styles */
+.prev-slide, .next-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev-slide {
+  left: 0;
+}
+
+.next-slide {
+  right: 0;
+}
+
+.prev-slide:focus, .next-slide:focus {
+  outline: none;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .headzz {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .card-container {
+    gap: 10px;
+    padding: 0;
+  }
+
+  .card {
+    max-width: 200px;
+  }
+
+  /* Hide slide buttons on mobile */
+  .prev-slide, .next-slide {
+    display: none;
+  }
+}

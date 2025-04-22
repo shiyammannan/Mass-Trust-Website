@@ -1,0 +1,31 @@
+RewriteEngine on
+
+# Redirect root URL to another page
+RewriteRule ^$ index.php [L]
+
+RewriteRule ^home$ modules/home/home.php [L]
+
+#dashboard
+RewriteRule ^dashboard$ modules/dashboard/dashboard.php [L]
+
+#about
+RewriteRule ^about-us?$ modules/about_us/about_us.php [L]
+
+#firm_profile
+RewriteRule ^firm-profile?$ modules/firm_profile/firm_profile.php [L]
+
+#gallery
+RewriteRule ^gallery?$ modules/gallery/gallery.php [L]
+
+#roadmap
+RewriteRule ^road-map?$ modules/road_map/road_map.php [L]
+
+#Reports
+RewriteRule ^documents?$ modules/documents/documents.php [L]
+
+#contact-us
+RewriteRule ^contact-us?$ modules/contact_us/contact_us.php [L]
+
+#supporters-impact
+RewriteRule ^supporters-impact?$ modules/support_impact/support_impact.php [L]
+

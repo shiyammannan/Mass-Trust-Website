@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /assets/
+Disallow: /components/
+Disallow: /config/
+Disallow: /json/
+Allow: /modules/
+Allow: /
+Sitemap: http://localhost/mass/sitemap.xml

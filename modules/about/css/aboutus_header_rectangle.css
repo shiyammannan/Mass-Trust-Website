@@ -1,0 +1,169 @@
+.rectangle {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #345F3C; /* light background color */
+  width: 100%;
+  height: 500px;
+  border-radius: 0 0 0 350px; 
+  margin-top: 80px; 
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px; /* Space between text-content and flower-container */
+}
+.text-content {
+  flex: 1;
+}
+
+.text-content h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: #000000;
+  font-size: xx-large;
+}
+
+.text-content span {
+  color: #ffffff;
+  font-size: 30px;
+  flex: 1;
+}
+
+.text-content p {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: larger;
+  max-width: 500px; /* Set a maximum width for the paragraph */
+  word-wrap: break-word; /* Ensure long words break correctly */
+  overflow-wrap: break-word; /* Adds a more comprehensive word-breaking strategy */
+  hyphens: auto; /* Adds hyphens if necessary */
+  line-height: 1.5; /* Improves readability by adding space between lines */
+}
+
+
+.flower-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px; /* Add a small gap between the squares */
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.square1 {
+  background-color: rgba(0, 0, 0, 0.1); /* Optional background color */
+  border-radius: 0px 50px 0px;
+}
+
+.square2 {
+  background-color: rgba(0, 0, 0, 0.2); /* Optional background color */
+  border-radius: 50px 0px  50px 0px;
+}
+
+.square3 {
+  background-color: rgba(0, 0, 0, 0.3); /* Optional background color */
+  border-radius: 50px 0px  50px 0px;
+}
+
+.square4 {
+  background-color: rgba(0, 0, 0, 0.4); /* Optional background color */
+  border-radius: 0px 50px 0px;
+}
+
+.square-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .rectangle {
+    flex-direction: row;
+    height: auto;
+    margin-top: 80px;
+    border-radius: 0 0 20px 20px; 
+    width: 100%;
+  }
+
+  .content-container {
+    flex-direction: row;
+    justify-content: space-between; /* Ensures even spacing between content and image */
+  }
+
+  .text-content h1 {
+    font-size: large;
+  }
+
+  .text-content span {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: medium;
+  }
+
+  .join-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .flower-container {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rectangle {
+    padding: 10px;
+    margin-top: 80px; 
+    border-radius: 0 0 20px 20px; 
+    width: 100%;
+
+  }
+
+  .text-content h1 {
+    font-size: medium;
+  }
+
+  .text-content span {
+    font-size: 18px;
+  }
+
+  .text-content p {
+    font-size: small;
+  }
+
+  .join-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .flower-container {
+    grid-template-columns: repeat(2, 80px);
+    grid-template-rows: repeat(2, 80px);
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+  }
+}

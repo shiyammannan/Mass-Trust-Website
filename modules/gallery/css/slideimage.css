@@ -1,0 +1,101 @@
+/* General styling for the slides */
+.slide-left, .slide-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.slideimage{
+    margin-left: 100px;
+}
+.image img:hover {
+    border-radius: 1%;
+    scale: 1.05;
+    transition: 1s;
+    z-index: 1;
+    box-shadow:  5px 10px #888888;
+}
+
+.image {
+    height: 500px;
+    width: 500px;
+}
+
+/* Remove transform, opacity, and transition for text and images */
+.slide-left .text, .slide-right .text {
+    width: 50%;
+    padding: 20px;
+}
+
+.slide-left .image, .slide-right .image {
+    width: 50%;
+    padding: 20px;
+}
+
+
+/* Alternating layout using nth-child */
+.slide-left:nth-child(odd) .image, .slide-right:nth-child(odd) .image {
+    order: 1; /* Image on the left for odd slides */
+}
+
+.slide-left:nth-child(odd) .text, .slide-right:nth-child(odd) .text {
+    order: 2; /* Text on the right for odd slides */
+}
+
+.slide-left:nth-child(even) .image, .slide-right:nth-child(even) .image {
+    order: 2; /* Image on the right for even slides */
+}
+
+.slide-left:nth-child(even) .text, .slide-right:nth-child(even) .text {
+    order: 1; /* Text on the left for even slides */
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .slideimage{
+        margin-left: 1px;
+    }
+    .image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1%;
+    }
+
+    .image {
+        height: 300px;
+        width: 20%;
+    }
+
+    .slide-left, .slide-right {
+        flex-direction: column;
+    }
+
+   .slide-left:nth-child(odd) .image, .slide-right:nth-child(odd) .image {
+    width: 100%;
+    order: 2; /* Image on the left for odd slides */
+}
+
+.slide-left:nth-child(odd) .text, .slide-right:nth-child(odd) .text {
+    width: 100%;
+    order: 2; /* Text on the right for odd slides */
+}
+
+.slide-left:nth-child(even) .image, .slide-right:nth-child(even) .image {
+    width: 100%;
+    order: 2; /* Image on the right for even slides */
+}
+
+.slide-left:nth-child(even) .text, .slide-right:nth-child(even) .text {
+    width: 100%;
+    order: 1; /* Text on the left for even slides */
+}
+}

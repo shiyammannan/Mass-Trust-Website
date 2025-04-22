@@ -1,0 +1,51 @@
+/* General Layout and Styling */
+.gallery-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #294d32;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 80%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #294d32;
+}
+
+.img img {
+    height: 80%;
+    width: 50%;
+}
+
+.heading {
+    width: 100%;
+    background-color: #294d32;
+}
+
+@media (max-width: 560px) {
+    .img {
+        height: 80%;
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+    .img img {
+        height: 80%;
+        width: 50%;
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px; /* Adjust this value to control the spacing below the image */
+}

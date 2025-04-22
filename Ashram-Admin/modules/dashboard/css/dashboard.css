@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F0F0E4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard {
+    margin: 20px;
+}
+
+/* Header Styles */
+.dashboard-header {
+    background-color: #294d32; /* Olive green background */
+    color: #F8F8F2; /* Light text color */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #294d32; /* Olive green color */
+}
+
+/* Activities List */
+.activities-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activities-list li {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+/* Health Card */
+.health-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.health-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.health-status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+}
+
+.status-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.online {
+    background-color: #4caf50; /* Green for online */
+}
+
+.offline {
+    background-color: #f44336; /* Red for offline */
+}

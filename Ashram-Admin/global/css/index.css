@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #f7f7e7,
+    #c3d6b5
+  ); /* Gradient Background */
+  font-family: Arial, sans-serif;
+  color: #556b2f; /* Text Color (Olive Green) */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.login-box {
+  background: #f7f7e7; /* Light Background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-box h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #556b2f; /* Accent Color (Olive Green) */
+  text-transform: uppercase;
+}
+
+.user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #556b2f; /* Text Color (Olive Green) */
+  outline: none;
+  color: #556b2f; /* Accent Color (Olive Green) */
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #556b2f; /* Text Color (Olive Green) */
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #6b8e23; /* Lighter Olive Green on focus */
+  font-size: 12px;
+}
+
+input[type="submit"] {
+  background: #556b2f; /* Accent Color (Olive Green) */
+  border: none;
+  padding: 12px 20px;
+  color: #f7f7e7; /* Light Background */
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #6b8e23; /* Lighter Olive Green on hover */
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    padding: 30px;
+  }
+
+  .user-box input {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .user-box label {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  .user-box input {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .user-box label {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
