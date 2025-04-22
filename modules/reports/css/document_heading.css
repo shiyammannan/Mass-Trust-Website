@@ -7,7 +7,7 @@
   width: 97%;
   height: 500px;
   border-radius: 0 0 350px 350px; /* Keep the rectangle's shape */
-  margin-top: 81px;
+  margin-top: 80px;
   position: relative; /* Make it easy to control content positioning */
   overflow: hidden; /* Prevent content from overflowing out of the rectangle */
 }
